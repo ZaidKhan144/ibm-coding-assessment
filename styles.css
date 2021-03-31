@@ -1,0 +1,25 @@
+/* Add your css styles here */
+
+.main-grid{
+    display: flex; 
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.sub-grids{
+    border: 1px solid #000;
+    flex-grow: 0.25;    /* for 25% of the window size */
+    text-align: center;
+}
+
+@media (max-width: 720px) {
+  .sub-grids {
+    width: calc(50% - 2px) /* for 2x2 */
+  }
+}
+
+@media (max-width: 360px) {
+  .sub-grids {
+    width: calc(100% - 2px) /* for 4x1 */
+  }
+}
